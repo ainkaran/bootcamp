@@ -415,3 +415,7 @@ end
 print "Enter a sentence"
 print "> "
 sentences = gets.chomp.split.map {|word| word.capitalize}.join(' ')
+
+
+
+uwiyiuwyiu
