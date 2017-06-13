@@ -418,4 +418,99 @@ sentences = gets.chomp.split.map {|word| word.capitalize}.join(' ')
 
 
 
-uwiyiuwyiu
+%w short hand for creating an array
+
+
+students = %w(Ainkaran Allain Amir Colin Devansh Jackie Kyle Michael Mohammed Ozge Roy
+ Samuel Sanny Shaggy Jacky Sid Srinivas)
+
+result = []
+
+students.each do |student|
+  result << student.length
+end
+
+print result
+
+new_result = students.map { |student| student.length }
+print new_result
+
+fancy_result = students.map(&:length)
+print fancy_result
+
+
+array = [[2,3,4], [5,6,7], [6,7,8]]
+
+array.map do |x|
+  x.map { |y| y **2 }
+end
+
+
+use flatten
+each_slice(3)
+
+
+
+
+s = "abcd"
+a= a.split(%r{\s*})
+
+newArray = []
+a.map do |x|
+  newArray = x
+end
+
+puts newArray
+
+
+s = "abcd"
+a= a.split(%r{\s*})
+
+newArray = []
+
+a.each.with_index do |x, i|
+  unless i == a.length - 1
+    newArray << a[i] + a[i+1]
+  end
+end
+
+puts newArray
+
+
+s = "HelloDone"
+a= s.split(%r{\s*})
+
+newArray = []
+a.each.with_index do |x, i|
+  newArray << a[a.length-i-1]
+end
+
+puts newArray
+
+
+
+
+booksNames = []
+loop do
+  print "Enter book name"
+  print "> "
+  booksName = gets.chomp.to_s
+  break if booksName.downcase == 'exit'
+    booksNames << booksName.split(' ').map{|x| x.capitalize}.join(' ')
+end
+
+puts booksNames
+
+
+
+
+
+loop do
+  puts "Give me a name!"
+  print ">"
+  name = gets.chomp
+  break if name.downcase == 'exit'
+  names << name
+end
+
+puts names.inspect
