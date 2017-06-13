@@ -464,7 +464,7 @@ puts newArray
 
 
 s = "abcd"
-a= a.split(%r{\s*})
+a= s.split(%r{\s*})
 
 newArray = []
 
